@@ -1,0 +1,101 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+a {
+    color: #2db7f5;
+    text-decoration: none;
+    -webkit-transition: color .3s ease;
+    transition: all .3s ease;
+}
+.calendar {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    width: 231px;
+    border: 1px solid #d9d9d9;
+    list-style: none;
+    font-size: 12px;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.17);
+    background-clip: padding-box;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+.cal-input-wrap {
+    position: relative;
+    height: 34px;
+    padding: 6px;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.cal-input-wrap > .cal-input {
+    border: 0;
+    width: 100%;
+    cursor: auto;
+    outline: 0;
+    height: 22px;
+}
+.cal-input-wrap > .del {
+    position: absolute;
+    right: 5px;
+    overflow: hidden;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 13px;
+    top: 10px;
+    margin: 0;
+    cursor: pointer;
+    color: #eee;
+    background: #adabab;
+}
+.cal-input-wrap > .del:hover {
+    background: #908e8e;
+}
+
+.cal-header {
+    position: relative;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.prev-year, .prev-month, .next-year, .next-month {
+    position: absolute;
+    top: 0;
+    color: #999;
+    font-family: Arial,"Hiragino Sans GB","Microsoft Yahei","Microsoft Sans Serif",sans-serif;
+    padding: 0 5px;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 34px;
+    cursor: pointer;
+}
+
+.cal-header .prev-year{
+    left: 7px;
+}
+
+.cal-header .prev-month {
+    left: 29px;
+}
+
+.cal-header .next-year {
+    right: 29px;
+}
+
+.cal-header .next-month {
+    right: 7px;
+}
+
+.cal-header a:hover {
+    color: #2db7f5;
+}
