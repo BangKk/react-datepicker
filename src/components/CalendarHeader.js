@@ -8,13 +8,19 @@ export default class CalendarHeader extends React.Component{
             ...props
         }
     }
+    componentWillReceiveProps(nextProps) {
+        const { year, month } = nextProps;
+        this.setState({
+            year,
+            month
+        }) 
+    }
     renderDate() {
-        const { year, month, day } = this.state
+        const { year, month } = this.state
         return `${year}年${month}月`
     }
     render() {
         let props = this.state
-        console.log(props)
         return (
             <div className="cal-header">
                 <a className="prev-year" onClick={props.onPrevYearClick}>«</a>
@@ -22,8 +28,8 @@ export default class CalendarHeader extends React.Component{
                 <span>
                     {this.renderDate.bind(this)()}
                 </span>
-                <a className="next-year" onClick={props.onNextYearClick}>›</a>
-                <a className="next-month" onClick={props.onnextMonthClick}>»</a>
+                <a className="next-year" onClick={props.onNextMonthClick}>›</a>
+                <a className="next-month" onClick={props.onNextYearClick}>»</a>
             </div>
         )
     }
